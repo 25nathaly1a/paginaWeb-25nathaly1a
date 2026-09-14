@@ -14,7 +14,9 @@ main {
     background-color: #FFFFFF;
     color: #183C63;
     margin: 0 auto; 
-    padding: 16px;    
+    padding: 16px;
+    
+    display: flex;
 }
 
 article {

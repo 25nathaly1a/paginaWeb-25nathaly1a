@@ -7,30 +7,18 @@ header {
     color: #FFFFFF;
     text-align: center;
     margin: 0 auto; 
-    padding: 16px;
-    border: 5px solid #0b1e33;
-    
+    padding: 16px;   
 }
 
 main {
     background-color: #FFFFFF;
     color: #183C63;
     margin: 0 auto; 
-    padding: 16px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
+    padding: 16px;    
 }
 
 article {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;    
-    text-align: center;    
-    gap: 12px; 
-    margin-bottom: 32px; 
-    width: 100%;
+    display: flex;  
 }
 
 img {

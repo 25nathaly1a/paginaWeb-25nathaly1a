@@ -15,3 +15,9 @@ const botoes = document.querySelectorAll("button");
                 }
             }
         })
+
+const BtnTemaescuro = document.querySelector(".btn-tema-escuro");
+
+BtnTemaescuro
+
+

@@ -1,9 +1,8 @@
-const botoes = document.querySelectorAll("button");
+const botoes = document.querySelectorAll("article button");
 
-        botoes.forEach( function(botao){
+        botoes.forEach( function (botao) {
         let curtiu = false;
-            botao.addEventListener("click", botaoClicado);
-            function botaoClicado() {
+            botao.addEventListener("click", function botaoClicado() {
                 console.log("fui clicado");
                 let texto = botao.querySelector("span");
                 if (curtiu === false){
@@ -13,11 +12,18 @@ const botoes = document.querySelectorAll("button");
                     texto.textContent--;
                     curtiu = false;
                 }
-            }
+            })
         })
 
-const BtnTemaescuro = document.querySelector(".btn-tema-escuro");
+        const BtnTemaEscuro = document.querySelector(".btn-tema-escuro");
+        
+        BtnTemaEscuro.addEventListener("click", mudaTema);
 
-BtnTemaescuro
-
-
+        function mudaTema() {
+            const corpoPagina = document.body;
+            if(corpoPagina.classList.contains("tema-escuro")) {
+                corpoPagina.classList.remove("tema-escuro");
+            } else {
+                corpoPagina.classList.add("tema-escuro");
+            }
+        }

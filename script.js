@@ -1,29 +1,31 @@
+// Funcionalidade dos botões de reação (Curtidas)
 const botoes = document.querySelectorAll("article button");
 
-        botoes.forEach( function (botao) {
-        let curtiu = false;
-            botao.addEventListener("click", function botaoClicado() {
-                console.log("fui clicado");
-                let texto = botao.querySelector("span");
-                if (curtiu === false){
-                    texto.textContent++;
-                    curtiu = true;
-                } else{
-                    texto.textContent--;
-                    curtiu = false;
-                }
-            })
-        })
+botoes.forEach(function (botao) {
+    let curtiu = false;
 
-        const BtnTemaEscuro = document.querySelector(".btn-tema-escuro");
-        
-        BtnTemaEscuro.addEventListener("click", mudaTema);
+    botao.addEventListener("click", function () {
+        let texto = botao.querySelector("span");
 
-        function mudaTema() {
-            const corpoPagina = document.body;
-            if(corpoPagina.classList.contains("tema-escuro")) {
-                corpoPagina.classList.remove("tema-escuro");
+        if (texto) {
+            let contador = parseInt(texto.textContent, 10);
+
+            if (!curtiu) {
+                texto.textContent = contador + 1;
+                curtiu = true;
             } else {
-                corpoPagina.classList.add("tema-escuro");
+                texto.textContent = contador - 1;
+                curtiu = false;
             }
         }
+    });
+});
+
+// Funcionalidade de Alternar Tema (Claro / Escuro)
+const btnTemaEscuro = document.querySelector(".btn-tema-escuro");
+
+if (btnTemaEscuro) {
+    btnTemaEscuro.addEventListener("click", function () {
+        document.body.classList.toggle("tema-escuro");
+    });
+}

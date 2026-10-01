@@ -1,9 +1,8 @@
 :root {
   --cor-primaria: #3b82f6;
-  --cor-segundaria: #60a5fa;
+  --cor-segundaria: #2563eb;
   --cor-fundo: #f0f7ff;
   --cor-texto: #1e293b;
-  --cor-contraste: #ffffff;
   --cor-card: #ffffff;
   --cor-botao: #dbeafe;
   --fonte-texto: 'Segoe UI', sans-serif;
@@ -14,11 +13,11 @@ body.tema-escuro {
   --cor-segundaria: #93c5fd;
   --cor-fundo: #0f172a;
   --cor-texto: #f1f5f9;
-  --cor-contraste: #f1f5f9;
   --cor-card: #1e293b;
-  --cor-botao: #1e293b;
+  --cor-botao: #334155;
 }
 
+/* Corrigido: Usar * ao invés de - para aplicar transição a todos os elementos */
 * {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -38,14 +37,26 @@ p {
   color: var(--cor-texto);
 }
 
+/* O texto do header acompanha a cor do texto padrão */
 header p {
-  color: var(--cor-contraste);
+  color: var(--cor-texto);
 }
 
 a {
   color: var(--cor-segundaria);
 }
 
+/* Estilo para os botões usando as variáveis do tema */
+button {
+  background-color: var(--cor-botao);
+  color: var(--cor-texto);
+  border: 1px solid var(--cor-segundaria);
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
 .btn-tema-escuro {
   background-color: var(--cor-segundaria);
+  color: #ffffff;
 }

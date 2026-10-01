@@ -1,3 +1,4 @@
+/* Variáveis para Tema Claro */
 :root {
   --cor-primaria: #3b82f6;
   --cor-segundaria: #2563eb;
@@ -5,9 +6,10 @@
   --cor-texto: #1e293b;
   --cor-card: #ffffff;
   --cor-botao: #dbeafe;
-  --fonte-texto: 'Segoe UI', sans-serif;
+  --fonte-texto: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Variáveis para Tema Escuro */
 body.tema-escuro {
   --cor-primaria: #1e3a8a;
   --cor-segundaria: #93c5fd;
@@ -17,36 +19,71 @@ body.tema-escuro {
   --cor-botao: #334155;
 }
 
-/* Corrigido: Usar * ao invés de - para aplicar transição a todos os elementos */
+/* Transição suave de cores para todos os elementos */
 * {
   transition: background-color 0.3s ease, color 0.3s ease;
+  box-sizing: border-box;
 }
 
 body {
   background-color: var(--cor-fundo);
   color: var(--cor-texto);
   font-family: var(--fonte-texto);
+  margin: 0;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+header p {
+  color: var(--cor-texto);
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 article {
   background-color: var(--cor-card);
   color: var(--cor-texto);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-p {
-  color: var(--cor-texto);
+article img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
 }
 
-/* O texto do header acompanha a cor do texto padrão */
-header p {
-  color: var(--cor-texto);
+.artigo-autor {
+  font-size: 0.9rem;
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+.fonte-imagem {
+  font-size: 0.85rem;
+  opacity: 0.75;
 }
 
 a {
   color: var(--cor-segundaria);
+  text-decoration: none;
 }
 
-/* Estilo para os botões usando as variáveis do tema */
+a:hover {
+  text-decoration: underline;
+}
+
+/* Botões de Reação */
 button {
   background-color: var(--cor-botao);
   color: var(--cor-texto);
@@ -54,9 +91,22 @@ button {
   border-radius: 6px;
   padding: 6px 12px;
   cursor: pointer;
+  margin-right: 5px;
 }
 
+button:hover {
+  opacity: 0.9;
+}
+
+/* Botão de Tema */
 .btn-tema-escuro {
   background-color: var(--cor-segundaria);
   color: #ffffff;
+  border: none;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 8px 12px;
+  border-radius: 20px;
 }

@@ -1,11 +1,11 @@
-// Funcionalidade dos botões de reação (Curtidas)
+// Funcionalidade dos botões de reação (Curtidas e Joinhas)
 const botoes = document.querySelectorAll("article button");
 
 botoes.forEach(function (botao) {
     let curtiu = false;
 
     botao.addEventListener("click", function () {
-        let texto = botao.querySelector("span");
+        const texto = botao.querySelector("span");
 
         if (texto) {
             let contador = parseInt(texto.textContent, 10);

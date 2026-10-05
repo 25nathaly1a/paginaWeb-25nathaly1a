@@ -57,6 +57,10 @@ article {
   margin-bottom: 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
+img{
+  width: 80px;
+  height: 80px;
+}
 
 /* Regra ajustada para deixar as imagens pequenas e centralizadas */
 article img {

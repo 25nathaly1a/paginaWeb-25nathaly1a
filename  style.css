@@ -19,7 +19,7 @@ body.tema-escuro {
   --cor-botao: #334155;
 }
 
-/* Aplicação para todos os elementos */
+/* Transição suave de cores para todos os elementos (corrigido para *) */
 * {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
   box-sizing: border-box;
@@ -58,12 +58,14 @@ article {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
+/* Regra ajustada para deixar as imagens pequenas e centralizadas */
 article img {
-  max-width: 100%;
-  height: auto;
+  max-width: 300px;  /* Controla o tamanho máximo da imagem */
+  width: 100%;        /* Garante responsividade em telas menores */
+  height: auto;       /* Mantém a proporção da imagem sem distorcer */
   border-radius: 6px;
   display: block;
-  margin-bottom: 15px;
+  margin: 0 auto 15px auto; /* Centraliza a imagem no card */
 }
 
 .artigo-autor {
@@ -103,7 +105,7 @@ button:hover {
   opacity: 0.9;
 }
 
-/* Estilo do botão de reação quando ativado (curtido) */
+/* Destaque visual para o botão de reação quando ativado/curtido */
 button.ativo {
   background-color: var(--cor-segundaria);
   color: #ffffff;
